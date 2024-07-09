@@ -29,10 +29,10 @@ $cityremove = "Türkiye";
 
  
 if ($index !== false) {
-    unset($cities[$index]);                       //(4)
-    echo "'$cityremove' has been removed from the array.<br>";
+    unset($cities);                       //(4)
+    echo "'$cityremove'  removed  array.<br>";
 } else {
-    echo "'$cityremove' not found in the array.<br>";
+    echo "'$cityremove' not f array.<br>";
 }
 // print_r($cities);
 
@@ -62,11 +62,58 @@ $products = array(                                        //(1)
     "Apple" => 2.50,
 
 );
-
-
 print_r($products);                                         //(2)
 
 
+echo "<hr>"; 
+
+
+$products = array(
+    array("name" => "blueberry", "price" => 1.25),
+    array("name" => "watermelon", "price" => 0.75),
+    array("name" => "Apple", "price" => 2.50),
+);
+
+usort($products, function($a, $b) {
+    return $a['price'] <=> $b['price'];
+});
+
+print_r($products);
+
+
+
+echo "<hr>"; 
+
+
+
+//task(3)
+echo "<br>"; 
+$books = array(
+    array(
+        "title" => "Suzuki s",
+        "author" => "Suzuki",
+        "year" => 1909
+    ),
+    array(
+        "title" => "Suzuki b",
+        "author" => "Suzuki",
+        "year" => 1960
+    ),
+    array(
+        "title" => "Suzuki book",
+        "author" => "J.D. Salinger",
+        "year" => 2001
+    )
+);
+
+$newBook = array(
+    "title" => "sdsdsdsd",                      //(3)
+    "author" => "sdsdsd",
+    "year" => 2003
+);
+
+$books[] = $newBook; 
+print_r($books);                               //(2)
 
 
 

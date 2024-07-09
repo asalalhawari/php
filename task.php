@@ -160,6 +160,11 @@ echo "<hr>";
 // }
 
 
+// $cities = ["watermelon", "blueberry", "Apple", "banana" ];
+// $subArray = array_slice($cities, 0, 3);
+
+// print_r($subArray);  
+
 
 
 
